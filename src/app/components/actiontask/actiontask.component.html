@@ -1,0 +1,36 @@
+
+<div class="container mt-5">
+    <p class="alert alert-success text-center text-uppercase h1">Action task</p>
+
+        <div class="mb-3">
+
+            <label  class="form-label">Title</label>
+            <input  [(ngModel)]="getData.name" type="text" class="form-control" >
+           
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Description</label>
+            <textarea class="form-control" [(ngModel)]="getData.desc"  style="height: 100px"></textarea>
+      
+          </div>
+
+
+
+          <div class="row ">
+            <div class="col">
+              <button type="submit" (click)="Edit()" class="btn btn-success d-block  col-12">Edit</button>
+            </div>
+            <div class="col">
+              <button type="submit" (click)="Delete()" class="btn btn-danger d-block  col-12">Delete</button>
+            </div>
+          
+            <div class="col">
+              <button type="submit" (click)="cancel()" class="btn btn-primary  d-block col-12">Cancel</button>
+            </div>
+          </div> 
+
+        
+ 
+
+
+

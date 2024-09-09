@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div *ngIf="taskServices.tasks.length == 0">
+       
+        <p class="alert alert-danger text-center text-uppercase h1"> no tasks at day</p>
+    </div>
+    <div *ngIf="taskServices.tasks.length != 0">
+        <p class="alert alert-success text-center text-uppercase h1">my task at day</p>
+        <ul class="list-group">
+            <li class="list-group-item  h4 text-capitalize"  *ngFor="let item of taskServices.tasks;index as i">
+               <a class="nav-link text-primary" [routerLink]="['/app-actiontask',i]" >
+                {{item.name}}
+               </a> 
+               <button type="button"  class="btn btn-danger rounded-pill border  float-end" (click)="deleteselect(i)">Delete</button>
+
+               <button type="button"  class="btn btn-secondary rounded-pill border  float-end" (click)="Detail(i)">Detail</button>
+
+            </li>
+        </ul>
+    </div>
+    <div class="row">
+        <button type="button" routerLink="/app-add-tasks"  class="btn btn-success px-5 py-2 float-center">Add</button>
+    </div>
+   
+</div>
+
+
+ 
+
+   
+  
+

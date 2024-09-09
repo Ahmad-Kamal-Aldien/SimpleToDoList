@@ -1,0 +1,24 @@
+
+<div class="container mt-5">
+    <p class="alert alert-success text-center text-uppercase h1">add tasks </p>
+    <!-- <form> -->
+        <div class="mb-3">
+
+            <label  class="form-label">Title</label>
+            <input #txttitle type="text" class="form-control" >
+           
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Description</label>
+            <textarea #txtdesc class="form-control"  style="height: 100px"></textarea>
+      
+          </div>
+          <div class="row">
+            <button type="submit" (click)="add(txttitle,txtdesc)" class="btn btn-primary">Add</button>
+
+          </div>
+
+      <!-- </form> -->
+</div>
+
+
